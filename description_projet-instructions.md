@@ -41,12 +41,3 @@ inclure des cookies et des variables de session
 Cookies pour l'equipe favorite du user 
 
 -------------------------
-
-Monsieur, j'avais bien entamé pendant le semestre mon site de club de foot. 
-Malheureusement, j'ai appris il y a quelques jours une triste nouvelle sur le plan personnel. Je n'ai donc pas avancé et terminé comme je le souhaitais après les examens. Je ne dis pas ça pour vous amadouer, j'avais en plus bien commencé et fait des choses et fonctionnalités que je trouvais vraiment interessantes, malheureusement je n'ai pas pu terminer mon travail. 
-
-J'espere que vous serez un tout petit peu indulgent pour ce qui est de la note mais je m'excuse par avance de vous rendre un travail pas terminé. 
-
-Bon courage à vous pour les corrections. 
-
-Merci de votre compréhension. 
