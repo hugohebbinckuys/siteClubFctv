@@ -1,0 +1,57 @@
+create table equipe (
+    id_equipe INT(11) PRIMARY KEY AUTO_INCREMENT, 
+    nom_equipe char(40) NOT NULL
+    );
+
+create table joueur (
+    id_joueur INT(11) AUTO_INCREMENT PRIMARY KEY, 
+    nom_joueur char (40) NOT NULL, 
+    prenom_joueur char (40) NOT NULL, 
+    date_naissance_joueur DATE NOT NULL,
+    date_arrivee_joueur DATE NOT NULL, 
+    mail_joueur char (60) NOT NULL, 
+    poste_joueur char (20) NOT NULL, 
+    id_equipe int (11) NOT NULL, 
+    foreign key (id_equipe) REFERENCES equipe(id_equipe) ON UPDATE CASCADE ON DELETE RESTRICT
+    );
+
+CREATE TABLE entraineur (
+    id_entraineur INT (11) AUTO_INCREMENT PRIMARY KEY, 
+    nom_entraineur CHAR (50) NOT NULL, 
+    prenom_entraineur CHAR (50) NOT NULL, 
+    date_naissance DATE NOT NULL, 
+    date_arrivee DATE NOT NULL, 
+    mail VARCHAR (100) NOT NULL
+);
+
+CREATE TABLE lienEquipeEntraineur(
+    equipe_id INT (11) NOT NULL,
+    entraineur_id INT (11) NOT NULL,
+    PRIMARY KEY (equipe_id, entraineur_id),
+    FOREIGN KEY (equipe_id) REFERENCES equipe(id_equipe) ON UPDATE CASCADE ON DELETE RESTRICT, 
+    FOREIGN KEY (entraineur_id) REFERENCES entraineur(id_entraineur) ON UPDATE CASCADE ON DELETE RESTRICT
+    );
+
+CREATE TABLE `user` (
+    id_user INT (11) AUTO_INCREMENT PRIMARY KEY,
+    nom_user CHAR (50) NOT NULL,
+    prenom_user CHAR (50) NOT NULL, 
+    mail VARCHAR (100) NOT NULL, 
+    role VARCHAR(50) NOT NULL DEFAULT 'supporter',
+    password VARCHAR (100) NOT NULL
+    );
+    
+CREATE TABLE benevoleBureau(
+    id_benevole INT (11) AUTO_INCREMENT PRIMARY KEY, 
+    nom_benevole CHAR (50) NOT NULL, 
+    prenom_benevole CHAR (50) NOT NULL,
+    role_benevole VARCHAR(50) NOT NULL, 
+    id_joueur INT (11) NULL, 
+    id_entraineur INT (11) NULL,
+    FOREIGN KEY (id_joueur) REFERENCES joueur(id_joueur) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (id_entraineur) REFERENCES entraineur(id_entraineur) ON UPDATE CASCADE ON DELETE CASCADE
+    );
+    
+ALTER TABLE equipe ADD categorie VARCHAR (20) NOT NULL; 
+    
+// on delete cascade car si plus un entraineur alors y faut supprimer 

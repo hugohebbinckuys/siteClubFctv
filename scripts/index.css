@@ -1,0 +1,259 @@
+:root{
+    --navbar-color: #DDDFE6;
+    --rouge-fctv: #FF0000; 
+    --gris-formulaire: #F2F2F2; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-align: center; */
+    font-family: "Inter";
+}
+
+.header {
+    /* padding: 25px; */
+    width:100%;
+    position: fixed;
+    text-decoration : 100%;
+    background-color: var(--navbar-color);
+    justify-content:space-between;
+    align-items: center; /* aligne au milieu de la navbar (par rapport au haut et au bas pas par rapport aux cotés) */
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--rouge-fctv);
+}
+
+.navbar_container {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}   
+
+.navbar_container a {
+    text-decoration: none;
+    color: black;
+}
+
+/* .navbar_container a img{
+    position: absolute;
+} */
+
+.navbar {
+    width: 100%;
+}
+
+.navbar_container a:hover {
+    color: var(--rouge-fctv);
+    transition-duration: 0.4s;
+}
+
+.petit_logo_navbar{
+    width: 30px;
+    height: 30px;
+}
+
+.logoFctv{
+    width: 80px;
+    height: 80px;
+    /* position: absolute; */
+    top: 1%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+}
+
+.img_fond{
+    text-align: center;
+}
+
+.img_fond img{
+    margin-top: 10%;
+    width: 40%;
+    border-style: none;
+    z-index: -100;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 2px black;
+} 
+
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bienvenu h3{
+    font-weight:600;
+    color: var(--rouge-fctv);
+    margin-bottom: 10px;
+}
+
+.intro h3 {
+    font-weight:500;
+    color: var(--rouge-fctv);
+}
+
+.forms_container {
+    margin: 2%;
+    margin-top: 0%;
+    padding: 20px;
+    padding-top: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction:row-reverse;
+    align-items:end;
+    text-align: center;
+    justify-content: center;
+    /* margin-left: 17%; */
+}
+
+.form_connexion{
+    margin: 2%;
+    background-color: var(--gris-formulaire);
+    padding: 20px;
+}
+
+.champ_form input {
+    padding: 6px;
+    margin: 3px;
+    border-style: none;
+    width: 400px;
+}
+
+.sousTitre_form{
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.submit{
+    margin-top: 5%;
+    margin-bottom: 1%;
+    /* border-top-color: var(--rouge-fctv);
+    border-bottom-color: var(--rouge-fctv);
+    border-top-width: 1px;
+    border-right-style: none;
+    border-left-style: none; */
+}
+
+.submit input {
+    border-top-color: var(--rouge-fctv);
+    border-bottom-color: var(--rouge-fctv);
+    border-width: 1px;
+    border-right-style: none;
+    border-left-style: none;
+    color: var(--rouge-fctv);
+}
+
+.submit input:hover{
+    cursor: pointer;
+}
+
+.centre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.droite{
+    margin: 0%;
+    margin-bottom: 2%;
+}
+
+.droite .titre_form p{
+    margin-bottom: 1%;
+}
+
+.vide{
+    background-color: white;
+    width: 12%;
+}
+
+.footer_container{
+    background-color: var(--rouge-fctv);
+    width: 100%;
+    padding: 1%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    display: flex;
+    justify-content:space-between;
+    /* position: absolute;
+    bottom:0; */
+}
+
+.suivez_nous {
+    color: white;
+}
+
+.reseau{
+    display: flex;
+    align-items: center;
+}
+
+.reseau a{
+    margin-right:10px;
+}
+
+.reseau p{
+    margin-right:20px;
+}
+
+.reseau a img{
+    width: 15px;
+    height: 15px;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titre_section {
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.titre_section h2{
+    width: 35%;
+    color: var(--rouge-fctv);
+    border-color: var(--rouge-fctv);
+    border-width: 1px;
+    border-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.section_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.equipe_select_container{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.equipe_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_equipe {
+    width: 100%;
+}
+
+.table_equipe td{
+    text-align: center;
+}
+
+.nom_rouge{
+    color: var(--rouge-fctv);
+}
